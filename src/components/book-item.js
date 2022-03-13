@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { markBookisDone } from "../redux/actions/book";
+import { deleteBookbyId, markBookisDone } from "../redux/actions/book";
 
 const BookItem = ({id,name,isDone}) => {
 
@@ -7,6 +7,10 @@ const BookItem = ({id,name,isDone}) => {
 
     function markBook(){
         dispatch(markBookisDone(id))
+    }
+
+    function deleteBook(){
+        dispatch(deleteBookbyId(id))
     }
 
     return (
@@ -26,7 +30,7 @@ const BookItem = ({id,name,isDone}) => {
                     { name }
                 </label>
             </div>
-            <button className="btn btn-outline-danger btn-sm">Remove</button>
+            <button className="btn btn-outline-danger btn-sm" onClick={deleteBook}>Remove</button>
         </li>
     );
 }

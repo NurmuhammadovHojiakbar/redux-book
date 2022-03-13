@@ -18,7 +18,7 @@ const BookItems = () => {
                         isDone={b.isDone}
                      />
                     )) :
-                    <li>Kitob mavjud emas:(</li>
+                    <li className="list-group-item text-center" >Kitob mavjud emas:(</li>
             }
         </ul>
     );
