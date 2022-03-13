@@ -1,5 +1,16 @@
 import bookActions from "../../constants/book"
 
+export const addBook = (name) =>{
+    return {
+        type: bookActions.ADD_BOOK,
+        payload: {
+            id: Math.random(),
+            name: name,
+            isDone: false
+        }
+    }
+}
+
 export const markBookisDone = (id) =>{
     return {
         type: bookActions.ISDONE,

@@ -15,6 +15,11 @@ const initialState = [
 
 const bookReducer = (state = initialState,action) =>{
     switch(action.type){
+        case bookActions.ADD_BOOK:
+            return [
+                ...state,
+                action.payload
+            ]
         case bookActions.ISDONE:
             return state.map(item =>{
                 if(item.id === action.payload.id){

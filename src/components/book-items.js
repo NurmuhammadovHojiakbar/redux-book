@@ -4,7 +4,6 @@ import BookItem from "./book-item";
 const BookItems = () => {
 
     const { bookReducer } = useSelector(state => state)
-    console.log(bookReducer)
 
     return (
         <ul className="list-group list-group-flush">
