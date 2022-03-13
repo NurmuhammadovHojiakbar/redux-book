@@ -28,3 +28,21 @@ export const deleteBookbyId = (id) =>{
         }
     }
 }
+
+export const saveBooks = (state) => {
+    return {
+        type: bookActions.SAVE_BOOKS,
+        payload: {
+            state
+        }
+    }
+}
+
+export const deleteBook = (state) =>{
+    return {
+        type: bookActions.DELETE_ALL,
+        payload: {
+            state
+        }
+    }
+}
